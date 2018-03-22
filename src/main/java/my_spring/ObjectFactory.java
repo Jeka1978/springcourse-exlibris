@@ -34,12 +34,12 @@ public class ObjectFactory {
     }
 
 
-    public <T> T createObject(Class<T> type) throws IllegalAccessException, InstantiationException {
+    @SneakyThrows
+    public <T> T createObject(Class<T> type) {
         type = resolveImpl(type);
         T t = type.newInstance();
         configure(t);
-
-
+        //todo add logic which will invoke all methods of t object
         return t;
 
     }

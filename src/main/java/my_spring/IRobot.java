@@ -13,6 +13,8 @@ public class IRobot {
     @InjectByType
     private Cleaner cleaner;
 
+
+
     public void cleanRoom() {
         speaker.speak("I started my work");
         cleaner.clean();

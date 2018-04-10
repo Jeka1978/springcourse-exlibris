@@ -2,10 +2,12 @@ package qualifiers;
 
 import org.springframework.stereotype.Repository;
 
+import static qualifiers.DB.ORACLE;
+
 /**
  * @author Evgeny Borisov
  */
-@Repository
+@ExlibrisRepo(ORACLE)
 public class BackupDao implements Dao {
     @Override
     public void save() {

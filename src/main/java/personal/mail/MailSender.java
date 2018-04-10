@@ -9,18 +9,14 @@ import java.util.Map;
 public class MailSender {
     private MailDao mailDao = new MailDaoImpl();
 
-    private Map<Integer, MailGenerator> map = new HashMap<>();
+    private Map<String, MailGenerator> map = new HashMap<>();
 
-    public MailSender() {
-        map.put(1, new WelcomeMailGenerator());
-    }
 
     public void sendMail() {
         MailInfo mailInfo = mailDao.getMailInfo();
         int mailCode = mailInfo.getMailCode();
-        String body = MailCodeEnum.findByDbCode(mailCode)
-                .getMailGenerator().generateBody(mailInfo);
-        send(body);
+
+
 
     }
 

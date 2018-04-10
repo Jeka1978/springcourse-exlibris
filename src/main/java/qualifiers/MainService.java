@@ -4,14 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import static qualifiers.DB.MONGO;
+import static qualifiers.DB.ORACLE;
+
 /**
  * @author Evgeny Borisov
  */
 @Service
 public class MainService {
-    @Autowired
+    @ExlibrisRepo(DB.ORACLE)
     private Dao backupDao;
-    @Autowired
+    @ExlibrisRepo(MONGO)
     private Dao mainDao;
 
     @Scheduled(fixedDelay = 1000)

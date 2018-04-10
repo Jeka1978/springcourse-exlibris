@@ -1,11 +1,11 @@
 package qualifiers;
 
-import org.springframework.stereotype.Repository;
+import static qualifiers.DB.MONGO;
 
 /**
  * @author Evgeny Borisov
  */
-@Repository
+@ExlibrisRepo(MONGO)
 public class DaoImpl implements Dao {
     @Override
     public void save() {

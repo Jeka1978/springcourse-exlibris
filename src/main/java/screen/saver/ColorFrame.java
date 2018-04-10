@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -19,10 +22,15 @@ public class ColorFrame extends JFrame {
     @Autowired
     private Color color;
 
+
     @Autowired
     private Random random;
     @PostConstruct
     public void init(){
+
+
+
+
         System.out.println(color.getClass());
         System.out.println(color.getBlue());
         System.out.println(color.getBlue());

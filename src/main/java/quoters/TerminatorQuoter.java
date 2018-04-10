@@ -2,6 +2,7 @@ package quoters;
 
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
@@ -16,7 +17,7 @@ import java.util.List;
 /**
  * @author Evgeny Borisov
  */
-@Component
+@Film
 public class TerminatorQuoter implements Quoter {
 
     private List<String> messages;

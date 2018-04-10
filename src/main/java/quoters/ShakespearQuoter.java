@@ -2,7 +2,10 @@ package quoters;
 
 import lombok.Setter;
 import my_spring.InjectRandomInt;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -12,6 +15,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+@Book
 public class ShakespearQuoter implements Quoter {
 
     @Value("${shake}")

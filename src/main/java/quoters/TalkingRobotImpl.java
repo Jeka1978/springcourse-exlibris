@@ -2,6 +2,7 @@ package quoters;
 
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -15,9 +16,10 @@ import java.util.List;
  */
 @Component
 public class TalkingRobotImpl implements TalkingRobot {
-    private final List<Quoter> quoters;
+    @Film
+    private List<Quoter> quoters;
 
-    @Autowired
+
     public TalkingRobotImpl(List<Quoter> quoters) {
         this.quoters = quoters;
     }

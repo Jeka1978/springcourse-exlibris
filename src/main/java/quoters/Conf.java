@@ -1,9 +1,6 @@
 package quoters;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -14,5 +11,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @PropertySource("classpath:quotes.properties")
 @ComponentScan
+@EnableAspectJAutoProxy
 public class Conf {
 }

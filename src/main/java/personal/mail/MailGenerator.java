@@ -5,4 +5,8 @@ package personal.mail;
  */
 public interface MailGenerator {
     String generateBody(MailInfo mailInfo);
+    int getMyCode();
+    boolean isEnabled();
+
+    void setEnabled(boolean enabled);
 }

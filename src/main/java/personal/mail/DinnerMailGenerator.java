@@ -8,16 +8,17 @@ import org.springframework.stereotype.Component;
  * @author Evgeny Borisov
  */
 @Component
-public class EmailCallbackMailGenerator implements MailGenerator {
+public class DinnerMailGenerator implements MailGenerator {
     @Setter
     @Getter
     private boolean enabled;
+    @Override
     public String generateBody(MailInfo mailInfo) {
-        return "don't call us we call you";
+        return "Dinner is planned to 12:30";
     }
 
     @Override
     public int getMyCode() {
-        return 2;
+        return 3;
     }
 }
